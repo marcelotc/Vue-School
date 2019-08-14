@@ -1,23 +1,24 @@
 Beginner
 
-1 - Vue.js Fundamentals
-2 - Vue.js Components Fundamentals
-3 - Vue.js Form Validation
-4 - Vue.js + Firebase Authentication
-5 - Vue.js + Firebase Realtime Database
-6 - JavaScript Testing Fundamentals
-7 - Nuxt.js Fundamentals
+1 - Vue.js Fundamentals 27 min
+2 - Vue.js Components Fundamentals 53 min
+3 - Vue.js Form Validation 34 min
+4 - Vue.js + Firebase Authentication 32 min
+5 - Vue.js + Firebase Realtime Database 34 min
+6 - JavaScript Testing Fundamentals 22 min
+7 - Nuxt.js Fundamentals 35 min
 
 Intermediate
 
-1 - Vuex for Everyone
-2 - Testing Vue.js Components
-3 - Custom Vue Directives
-5 - Single File Components
-4 - Dynamic Forms with Vue.js
-5 - Async Data with Nuxt.js
-6 - Static Site Generation with Nuxt.js
-7 - Test with Jest
+1 - Vuex for Everyone 1 hr
+2 - Custom Vue Directives 14 min
+4 - Vue Router for Everyone 38 min
+5 - Testing Vue.js Components  55 min
+6 - Single File Components 37 min
+7 - Dynamic Forms with Vue.js 58 min
+8 - Async Data with Nuxt.js 23 min
+9 - Static Site Generation with Nuxt.js 11 min
+10 - Test with Jest 52 min
 
 Master class
-The Vue.js Master Class
+The Vue.js Master Class 7 hr
