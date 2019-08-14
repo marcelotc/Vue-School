@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">
 </head>
 
 <body>
-
-    <script src="" async defer></script>
+    <div id="shopping-list">
+        <h1>{{ header }}</h1>
+        <input type="text" v-model="header"></input>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        var shopingList = new Vue({
+            el: '#shopping-list', 
+            data: {
+                header: 'Vue is ready to party!'
+            }
+        })
+    </script>
 </body>
 
 </html>
