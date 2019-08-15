@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<style>
+.strike {
+    text-decoration: line-through;
+}
+.priority {
+    color: aquamarine
+}
+</style>
+
+<body>
+    <div id="shopping-list">
+        <div class="header">
+            <h1>{{ header.toLocaleUpperCase() }}</h1>
+            <button v-if="state === 'default'" @click="changeState('edit')">Add item</button>
+            <button v-else @click="changeState('default')">Cancel</button>
+        </div>
+        <div v-if="state === 'edit' " class="add-item-form">
+            <input v-model="newItem" type="text" placeholder="Add an item" @keyup.enter="saveItem"/>
+            <button class="btn btn-primary" v-bind:disabled="newItem.length === 0" @click="saveItem">Save Item</button>
+        </div>
+        <a v-bind:href="newItem" target="_blank">Dynamic Link</a>
+        <ul>
+            <li v-for="item in items" :class="{strike: item.purchased}" @click="togglePurchased(item)">{{ item.label }}</li>
+        </ul>
+        <p v-if="items.length === 0 ">Nice job! You've bought all your items.</p>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        var shopingList = new Vue({
+            el: '#shopping-list', 
+            data: {
+                state: 'default', 
+                header: 'shoping list app',
+                newItem: '',
+                items: [
+                    {
+                        label: '10 party hats',
+                        purchased: false,
+                        highPriority: false
+                    },
+                    {
+                        label: '2 bards games',
+                        purchased: true,
+                        highPriority: false
+                    },
+                    {
+                        label: '20 cups',
+                        purchased: false,
+                        highPriority: true
+                    }
+                ]
+            },
+            methods: {
+                saveItem: function () {
+                    this.items.push({
+                    label: this.newItem,
+                    purchased: false,
+                    }, );
+                    this.newItem = ''
+                },
+                changeState: function(newState) {
+                    this.state = newState
+                    this.newState = ''
+                },
+                togglePurchased: function (item) {
+                    item.purchased = !item.purchased
+                }
+            }
+        })
+    </script>
+</body>
+
+</html> 
